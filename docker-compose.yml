@@ -19,7 +19,7 @@ services:
     container_name: "api"
     build:
       context: ./api
-      target: prod
+      target: dev
     env_file:
       - ./api/.env
     networks:

@@ -37,7 +37,7 @@ export class RedisService {
             ex: parseInt(process.env.CACHE_TTL) || 60,
             toJson: true
         }
-    ) {
+    ): Promise<void> {
         try {
             val = opts.toJson ? JSON.stringify(val) : val
 
@@ -49,7 +49,7 @@ export class RedisService {
         }
     }
 
-    public async get(key: RedisCommandArgument, opts: RedisGetOptions = {fromJson: true}) {
+    public async get(key: RedisCommandArgument, opts: RedisGetOptions = {fromJson: true}): Promise<any> {
         try {
             const val = await this.client.get(key);
 

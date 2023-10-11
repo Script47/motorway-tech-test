@@ -2,6 +2,7 @@ import {Injectable, NotFoundException} from '@nestjs/common';
 import {VehiclesRepository} from "../vehicles/vehicles.repository";
 import {RedisService} from "../redis/redis.service";
 import * as moment from "moment-timezone";
+import {VehicleStateDto} from "./dto/vehicle-state-dto";
 
 @Injectable()
 export class VehicleStatesService {
@@ -10,7 +11,7 @@ export class VehicleStatesService {
         private readonly vehiclesRepository: VehiclesRepository) {
     }
 
-    async findByVehicleIdAndTimestamp(id: number, timestamp: string) {
+    async findByVehicleIdAndTimestamp(id: number, timestamp: string): Promise<VehicleStateDto> {
         const redisKey = `${id}_${timestamp}`.replace(/ /g, '');
         const redisVal = await this.redisService.get(redisKey)
 
