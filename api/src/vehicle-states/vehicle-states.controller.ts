@@ -1,7 +1,7 @@
 import {Controller, Get, Param, Query, ValidationPipe} from '@nestjs/common';
 import {VehicleStatesService} from './vehicle-states.service';
-import {VehicleStateRequestDto} from "./dto/vehicle-state-request-dto";
-import {VehicleStateDto} from "./dto/vehicle-state-dto";
+import {VehicleStateRequestDto} from "./dto/vehicle-state-request.dto";
+import {VehicleStateDto} from "./dto/vehicle-state.dto";
 
 @Controller('vehicle-states')
 export class VehicleStatesController {

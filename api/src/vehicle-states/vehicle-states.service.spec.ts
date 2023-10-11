@@ -1,6 +1,6 @@
 import {Test, TestingModule} from '@nestjs/testing';
 import {VehicleStatesService} from './vehicle-states.service';
-import {VehicleStateDto} from './dto/vehicle-state-dto';
+import {VehicleStateDto} from './dto/vehicle-state.dto';
 import {NotFoundException} from '@nestjs/common';
 
 describe('VehiclesStatesController', () => {

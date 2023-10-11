@@ -1,7 +1,7 @@
 import {Test, TestingModule} from '@nestjs/testing';
 import {VehicleStatesController} from './vehicle-states.controller';
 import {VehicleStatesService} from './vehicle-states.service';
-import {VehicleStateDto} from "./dto/vehicle-state-dto";
+import {VehicleStateDto} from "./dto/vehicle-state.dto";
 
 describe('VehiclesStatesController', () => {
     let vehicleStatesController: VehicleStatesController;

@@ -2,7 +2,7 @@ import {Injectable, NotFoundException} from '@nestjs/common';
 import {VehiclesRepository} from "../vehicles/vehicles.repository";
 import {RedisService} from "../redis/redis.service";
 import * as moment from "moment-timezone";
-import {VehicleStateDto} from "./dto/vehicle-state-dto";
+import {VehicleStateDto} from "./dto/vehicle-state.dto";
 
 @Injectable()
 export class VehicleStatesService {
